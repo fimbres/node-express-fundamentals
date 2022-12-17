@@ -1,8 +1,5 @@
 const { isaac, girlfriend, mother } = require('./constants');
-
-const sayHello = (name) => {
-    console.log(`hello, ${name}`);
-}
+const sayHello = require('./utils');
 
 sayHello(isaac);
 sayHello(mother);

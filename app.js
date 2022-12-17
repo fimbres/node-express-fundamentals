@@ -1,10 +1,5 @@
-const amount = 8;
+setInterval(() => {
+    console.log("hello world");
+}, 1000);
 
-if(amount > 10) {
-    console.log("big number");
-}
-else {
-    console.log("small number");
-}
-
-console.log("this is my third node app!");
+console.log(__filename);

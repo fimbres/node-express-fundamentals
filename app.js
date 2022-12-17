@@ -1,6 +1,4 @@
-const isaac = 'Isaac Fimbres';
-const mother = 'Perla Aragón';
-const girlfriend = 'Andrea Castro';
+const { isaac, girlfriend, mother } = require('./constants');
 
 const sayHello = (name) => {
     console.log(`hello, ${name}`);

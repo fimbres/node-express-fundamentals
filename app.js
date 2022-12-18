@@ -18,7 +18,7 @@ const start = async () => {
         const data = await getText('./assets/second-text.txt');
         console.log(data);
     } catch(error) {
-        console.error(data);
+        console.error(error);
     }
 }
 

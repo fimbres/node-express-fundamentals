@@ -1,5 +1,10 @@
 const os = require('os');
 
-const currentUser = os.userInfo();
+const currentOs = {
+    name: os.type(),
+    release: os.release(),
+    totalMemory: os.totalmem(),
+    freeMemory: os.freemem(),
+}
 
-console.log(currentUser);
+module.exports = currentOs;

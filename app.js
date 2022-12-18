@@ -1,7 +1,3 @@
-const { isaac, girlfriend, mother } = require('./constants');
-const sayHello = require('./utils');
+const currentOs = require('./modules/os');
 
-sayHello(isaac);
-sayHello(mother);
-sayHello('Peter');
-sayHello(girlfriend);
+console.log(currentOs);

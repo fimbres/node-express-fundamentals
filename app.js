@@ -1,16 +1,13 @@
-const { readFile, writeFile } = require('fs');
-const util = require('util');
+const EventEmitter = require('events');
 
-const readFilePromise = util.promisify(readFile);
-const writeFilePromise = util.promisify(writeFile);
+const customEmmiter = new EventEmitter();
 
-const start = async () => {
-    try {
-        const data = await readFilePromise('./assets/second-text.txt', 'utf-8');
-        console.log(data);
-    } catch(error) {
-        console.error(error);
-    }
-}
+customEmmiter.on('response', () => {
+    console.log("Data response")
+});
 
-start();
+customEmmiter.on('response', () => {
+    console.log("Other data in response")
+});
+
+customEmmiter.emit('response');

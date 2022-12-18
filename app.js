@@ -1,3 +1,6 @@
-const currentOs = require('./modules/os');
+const _ = require('lodash');
 
-console.log(currentOs);
+const items = [1, [2, [3, [4]]]];
+const flatItems = _.flattenDeep(items);
+
+console.log(flatItems);

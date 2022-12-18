@@ -13,4 +13,13 @@ const getText = (path) => {
     })
 }
 
-getText('./assets/second-text.txt').then(result => console.log(result)).catch(error => console.error(error));
+const start = async () => {
+    try {
+        const data = await getText('./assets/second-text.txt');
+        console.log(data);
+    } catch(error) {
+        console.error(data);
+    }
+}
+
+start();

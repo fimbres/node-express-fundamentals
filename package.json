@@ -1,0 +1,22 @@
+{
+  "name": "node-express-fundamentals",
+  "version": "1.0.0",
+  "description": "My personal repository with node and express fundamentals",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fimbres/node-express-fundamentals.git"
+  },
+  "author": "Isaac Fimbres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fimbres/node-express-fundamentals/issues"
+  },
+  "homepage": "https://github.com/fimbres/node-express-fundamentals#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

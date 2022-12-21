@@ -1,18 +1,18 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
-app.get('/', (request, response) => {
-    response.status(200).send('<h1>Home Page</h1>');
-});
+app.use(express.static('./public'));
 
-app.get('/about', (request, response) => {
-    response.status(200).send('<h1>About Page</h1>');
+app.get('/', (request, response) => {
+    response.sendFile(path.resolve(__dirname, './pages/home.html'));
 });
 
 app.all('*', (request, response) => {
-    response.status(404).send('<h1>Resource Not Found</h1>');
+    response.status(404).send('Resource Not Available.');
 });
 
 app.listen(5000, () => {
-    console.log("The server is listening in port 5000");
+    console.log("Server is listening in port 5000")
 });

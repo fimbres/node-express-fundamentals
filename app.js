@@ -1,13 +1,7 @@
-const fs = require('fs');
 const http = require('http');
 
-http.createServer((_, res) => {
-    const fileStream = fs.createReadStream('./assets/second-text.txt', 'utf-8');
-    fileStream.on('open', () => {
-        fileStream.pipe(res);
-    });
-    fileStream.on('error', (error) => {
-        res.end(error);
-    });
-    res.end();
+http.createServer((request, response) => {
+    response.writeHead(200, { 'content-type': 'text/html'});
+    response.write('<h1>Hello World</h1>');
+    response.end();
 }).listen(5000);

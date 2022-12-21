@@ -1,16 +1,9 @@
 const express = require('express');
-const path = require('path');
 
 const app = express();
 
-app.use(express.static('./public'));
-
 app.get('/', (request, response) => {
-    response.sendFile(path.resolve(__dirname, './pages/home.html'));
-});
-
-app.all('*', (request, response) => {
-    response.status(404).send('Resource Not Available.');
+    response.json({ firstName: "Isaac", lastName: "Fimbres" })
 });
 
 app.listen(5000, () => {

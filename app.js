@@ -19,7 +19,6 @@ app.get('/products/:productId', (request, response) => {
 });
 
 app.get('/query', (request, response) => {
-    console.log(request.query)
     response.json(request.query);
 });
 

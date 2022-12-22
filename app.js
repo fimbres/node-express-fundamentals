@@ -1,6 +1,8 @@
 const express = require('express');
+const logger = require('./middleware/logger.js');
 
 const app = express();
+app.use(logger);
 
 app.get('/', (request, response) => {
     response.json({ firstName: "Isaac", lastName: "Fimbres" })
